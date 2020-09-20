@@ -1,0 +1,15 @@
+// @import '../../node_modules/font-awesome-4.7.0/scss/font-awesome.scss';
+@import '../../node_modules/normalize.scss/normalize';
+
+@import 'global/_fonts.scss'; 
+@import 'global/_vars.scss';
+@import 'global/_common.scss';
+@import 'global/_mixins.scss';
+@import 'global/_base.scss';
+@import 'global/_button.scss';
+
+
+@import 'sections/_header.scss';
+@import 'sections/_navs.scss';
+@import 'sections/_hero.scss';
+@import 'sections/_about.scss';
