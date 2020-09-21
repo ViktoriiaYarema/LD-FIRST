@@ -717,3 +717,103 @@ ul, ol {
   height: 5px;
   background-color: #424242;
 }
+
+.approch {
+  padding: 86px 0 96px;
+  background-color: #f3f3f3;
+}
+
+.approch-list {
+  margin: 0;
+  padding: 0;
+  counter-reset: count;
+}
+
+.approch-item {
+  margin-bottom: 40px;
+  border-radius: 5px;
+  -webkit-box-shadow: -1px -1px 10px 1px #d6d6d6;
+          box-shadow: -1px -1px 10px 1px #d6d6d6;
+  color: #424242;
+}
+
+.approch-item:nth-child(2n) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  text-align: right;
+}
+
+.approch-item:nth-child(2n) .approch-text {
+  padding: 70px 90px;
+}
+
+.approch-item:nth-child(2n) .approch-step {
+  right: auto;
+  left: -58px;
+}
+
+.approch-image {
+  position: relative;
+  max-width: 340px;
+  max-width: 236px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.approch-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.approch-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 64%;
+  padding: 70px 70px 55px 90px;
+  font-size: 0.857rem;
+}
+
+.approch-step {
+  padding-top: 15px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -58px;
+  width: 103px;
+  height: 103px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: #de2b24;
+  color: #fff;
+}
+
+.approch-step::before {
+  content: counter(count);
+  counter-increment: count;
+  display: block;
+  font-family: "georgia-bold";
+  font-size: 3rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.approch-title {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.approch-description {
+  margin: 0;
+  line-height: 1.5;
+}
