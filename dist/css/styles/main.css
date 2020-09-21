@@ -639,3 +639,81 @@ ul, ol {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+.about {
+  padding: 100px 0 105px 0;
+  text-align: center;
+}
+
+.about-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0 50px;
+}
+
+.about-item {
+  width: 25%;
+}
+
+.about-header {
+  margin: 0 0 12px 0;
+  font-family: "helvetica-neue-bold";
+  font-size: 1.375rem;
+  color: #424242;
+}
+
+.about-description {
+  margin-top: 0;
+  font-size: 0.857rem;
+  font-family: "helvetica-neue-light";
+  color: #5c5c5c;
+  line-height: 1.5;
+}
+
+.icon {
+  padding: 0 0 23px 0;
+  max-width: 65px;
+  max-height: 80px;
+}
+
+.title {
+  margin-bottom: 65px;
+  text-align: center;
+  color: #424242;
+}
+
+.title-header {
+  margin: 0;
+  font-size: 2.25rem;
+  font-family: "helvetica-neue-bold";
+  line-height: 1;
+}
+
+.title-text {
+  font-size: 1.25rem;
+  font-family: "helvetica-neue-light";
+  color: #5c5c5c;
+}
+
+.title-with-bottom-line {
+  position: relative;
+}
+
+.title-with-bottom-line:after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: '';
+  bottom: -16px;
+  width: 47px;
+  height: 5px;
+  background-color: #424242;
+}
