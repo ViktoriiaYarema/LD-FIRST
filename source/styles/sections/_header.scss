@@ -10,15 +10,47 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 41px 0 32px;
+        @media (max-width: 991.98px) { 
+            flex-direction: column;
+                .button{
+                padding: 20px 40px;
+                font-size: 1.5rem;
+                }
+         }
+        @media (max-width: 575.98px) { 
+    
+        }
+        
+        
+        @media (max-width: 767.98px) {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+         }
+        
+        
+        
+        
+
+        
+        
+       
     }
 }
 .contacts{
     text-align: right;
-
+    @media  (max-width: 991.98px) { 
+        font-size: 1.5rem;
+        text-align: center;
+       }
+       @media (max-width: 767.98px) {
+        font-size: 1rem;
+    }
+   
+       
 }
 .contact{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: right;
     padding: 10px 10px 8px;
     text-decoration: none;
     color: #424242;
@@ -36,6 +68,9 @@
             margin-left: 7px;
             margin-right: 7px;
             font-size: 1.5rem;
+            @media (min-width: 768px) and (max-width: 991.98px) { 
+                
+             }
         }
         &-facebook{
             display: inline-block;
@@ -49,9 +84,49 @@
                 transition: ease-out 0.3s;
             }
         }
+       
+      
+}
 .logo{
     max-width: 250px;
     margin: 0 auto;
+    @media  (max-width: 992px) { 
+        padding-right: 40px;
+        padding-bottom: 10px;
+     }
+     
 }
-      
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 575.98px) { 
+    
+}
+
+
+@media (max-width: 768px) {
+    
+ }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+ }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+ }
+
+
+@media (min-width: 1200px) { 
+
+
 }

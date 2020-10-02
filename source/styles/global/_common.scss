@@ -2,3 +2,10 @@
     max-width: 1024px;
     margin: 0 auto;
 }
+.is-hidden{
+    display: none!important;
+}
+.visually-hidden{
+    text-indent:-999px;
+    font-size: 0px;
+}

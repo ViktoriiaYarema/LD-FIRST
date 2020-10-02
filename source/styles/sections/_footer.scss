@@ -1,0 +1,76 @@
+.footer{
+    &-top{
+        padding: 80px 0 83px;
+        text-align: center;
+        background-color: #2a2a2a;
+    }
+    &-bottom{
+        padding: 26px;
+        text-align: center;
+        background-color: #515151;
+    }
+    &-title{
+        margin-bottom: 20px;
+        font-size: 1.8125rem;
+        color: #fff;
+    }
+    &-social{
+        margin-left: 20px;
+        padding: 15px;
+        border: 1px solid #515151;
+        border-radius: 3px;
+        &:hover{
+          border: 1px solid #de2b24;  
+        }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+    &-links{
+        margin-bottom: 35px;
+        color: #fff;
+        .fa{
+            color: #fff;
+
+        }
+
+    }
+    &-text{
+        margin-bottom: 30px;
+        font-size: 0.875rem;
+        color: #cecece;
+    }
+    &-field{
+        width: 67%;
+        margin: 0 auto 27px;
+    }
+    &-input{
+        width: 100%;
+        padding: 20px;
+        font-size: 0.875rem;
+        color: #cecece;
+        background-color: #515151;
+        border: none;
+        &:focus{
+            box-shadow: 0px 0px 8px 1px rgba(222,43,36,0.9);
+            
+        }
+    }
+    .button{
+        border: 2px solid #515151;
+        padding: 15px 37px ;
+        box-sizing: border-box;
+        font-size: 1.0685rem;
+        font-family: $ff-main-bold;
+        background-color: initial;
+        color: #fff;
+        &:hover{
+            border: 2px solid #de2b24;  
+        }
+    }
+    &-copy{
+        font-size: 0.875rem;
+        color: #cecece;
+    }
+
+}

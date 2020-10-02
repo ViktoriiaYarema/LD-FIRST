@@ -1,6 +1,6 @@
 // @import '../../node_modules/font-awesome-4.7.0/scss/font-awesome.scss';
 @import '../../node_modules/normalize.scss/normalize';
-
+@import 'global/sprite.scss';
 @import 'global/_fonts.scss'; 
 @import 'global/_vars.scss';
 @import 'global/_common.scss';
@@ -15,3 +15,8 @@
 @import 'sections/_about.scss';
 @import 'sections/_title.scss';
 @import 'sections/_approch.scss';
+@import 'sections/_work.scss';
+@import 'sections/_form.scss';
+@import 'sections/_footer.scss';
+
+

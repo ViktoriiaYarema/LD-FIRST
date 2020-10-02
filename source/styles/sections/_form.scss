@@ -1,0 +1,119 @@
+.form-section{
+    background-color: #1287bf;
+    padding: 100px 0 110px 0;
+    color: #fff;
+
+    .title {
+        margin-bottom: 12px;
+        color: #fff;
+    }
+    .title-header{
+        font-size: 2.25rem;
+        @media (max-width:575px){
+            font-size: 2rem;
+        }
+    }
+    .btn-down{
+        position: relative;
+        width: 65px;
+        height: 65px;
+        margin: auto auto 20px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        @media (max-width:575px){
+            width: 50px;
+            height: 50px;
+        }
+    } 
+    .arrow{
+        @include centerer-xy();
+
+        .fa{
+            font-size: 2.5rem;
+            
+        }
+    }
+    
+}
+
+
+.form{
+    position: relative;
+    width: 67%;
+    margin: auto;
+    padding: 50px 50px 66px 50px;
+    border-radius: 3px;
+    color: #b7b7b7;
+    text-align: center;
+    background-color: #fff;
+
+    &-container{
+        padding-top: 30px;
+    }
+    &:before{
+        @include centerer-x();
+        border: 30px solid transparent;
+        border-bottom: 30px solid #fff;
+        top:-59px;
+        content: '';
+
+    }
+    &-text{
+        margin-bottom: 33px;
+        font-size: 0.9375rem;
+        line-height: 1.5;
+    }
+
+    &-close-button{
+        position: absolute;
+        right: -16px;
+        top: -22px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
+        text-align: center;
+        font-size: 2.25rem;
+        color: #fff;
+        background-color: #de2b24;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+
+        &:hover{
+            background: lighten(#de2b24, 10%);
+        }
+        @media (max-width:575px){
+            width: 40px;
+            height: 40px;
+            font-size: 2rem;
+        }
+    }
+    &-fields{
+        margin-bottom: 36px;
+
+    }
+    &-input{
+        width: 76%;
+        display: block;
+        margin: auto auto 8px auto;
+        padding: 18px 20px ;
+        border: 1px solid #1287bf;
+        border-radius: 3px;
+        font-size: 0.875rem;
+
+        &:focus{
+            box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+        }
+    }
+    @media (max-width: 768px){
+        width: 90%;
+        padding: 25px 25px 33px 25px;
+        &-input{
+            width: 92%;
+        }
+        .button{
+            font-size: 1.35rem;
+            padding: 10px 20px;
+        }
+    }
+}

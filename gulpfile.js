@@ -21,7 +21,7 @@ let path={
     watch:{
         pug:source_folder+'/template/',
         html:source_folder+'/**/*.html',
-        css:source_folder+'/styles/**/*.scss',
+        css:source_folder+'/**/*.scss',
         js:source_folder+'/js/**/*.js',
         img:source_folder+'/images/**/*.{jpg,png,svg,gif,ico,webp}',
     },
@@ -70,6 +70,12 @@ const webphtml = webPhtml;
 // // Sprite
 // import svgSprite from 'gulp-svg-sprite';
 // const svgsprite = svgSprite;
+import spr from 'gulp.spritesmith';
+const spritesmith = spr;
+import mrg from 'merge-stream';
+const merge= mrg;
+import svs from 'svg-sprite';
+const svgSprite = svs;
 // // Fonts
 // import ttf2Woff from 'gulp-ttf2woff';
 // const ttf2woff = ttf2Woff;
@@ -197,8 +203,41 @@ export const fonts=()=> {
         .pipe(dest(path.build.fonts))
         .pipe(browserSync.stream())
 }
+// Sprite
+export const spriteSMith=(cb)=> {
+    // Генерируем спрайт
+    const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
+      imgName: 'sprite.png',
+      imgPath: '../../images/sprite.png',
+      cssName: 'sprite.scss',
+      padding: 5,
+    }));
+  
+    // Оптимизируем спрайт
+    const imgStream = spriteData.img
+    //   .pipe(imagemin())
+      .pipe(gulp.dest('dist/images/'));
+  
+    // Собираем SCSS
+    const cssStream = spriteData.css
+      .pipe(gulp.dest('source/styles/global/'));
+  
+    return merge(imgStream, cssStream);
+    cb()
+  };
 
-
+// export const SvgSptites=()=> {
+//     return gulp.src(path.src.img)
+//         .pipe(svgSprite({
+//             mode:{
+//                 stack:{
+//                     sprite:'../sprite.svg'
+//                 }
+//             }
+//         }))
+//         .pipe(dest(path.build.img))
+//         .pipe(browserSync.stream());
+// }  
 // Copy
 
 // export const copy = () => {
@@ -237,6 +276,8 @@ export const startwatch = () => {
     gulp.watch([path.watch.css], gulp.series(css, paths));
     gulp.watch([path.watch.js], gulp.series(script, paths));
     gulp.watch([path.watch.img], gulp.series(images, paths));
+    // gulp.watch([path.watch.img], gulp.series(SvgSptites, paths));
+    gulp.watch([path.watch.img], gulp.series(spriteSMith, paths));
     // gulp.watch([path.watch.fonts], gulp.series(fonts, paths));
 };
 
@@ -250,7 +291,8 @@ export default gulp.series(
         buildPug,
         script,
         images,
-        
+        spriteSMith,
+        // SvgSptites,
         // copy
     ),
     paths,

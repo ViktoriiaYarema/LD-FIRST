@@ -11,6 +11,8 @@
             &:hover{
             background-color: lighten(#de2b24,7%);
             }
+
+            
         }
         &--yellow{
             color: #fff;
@@ -21,5 +23,9 @@
         }
         &--text-uppercase{
             text-transform: uppercase;
+        }
+        @media (max-width: 768px){
+            padding: 5px 11px 3.5px;
+            font-size: 1.2rem;
         }
 }

@@ -11,7 +11,7 @@
     &-text{
         font-size: 1.25rem;
         font-family: $ff-main-light;
-        color: #5c5c5c;
+       
     }
     &-with-bottom-line{
         position: relative;
@@ -24,4 +24,8 @@
                 background-color: #424242;
             }
     }
+    @media (max-width: 768px) {
+        margin-bottom: 35px;
+        }
+    
 }
