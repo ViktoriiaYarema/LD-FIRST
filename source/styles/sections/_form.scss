@@ -103,7 +103,16 @@
 
         &:focus{
             box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+            &:invalid{
+                border-color: 1px solid red;
+                box-shadow: 0px 0px 8px 1px rgba(248, 2, 2, 1);
+            }
+            &:valid{
+                border-color: 1px solid green;
+                box-shadow: 0px 0px 8px 1px rgba(2, 248, 2, 1);
+            }
         }
+       
     }
     @media (max-width: 768px){
         width: 90%;

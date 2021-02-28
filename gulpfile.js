@@ -82,6 +82,13 @@ const svgSprite = svs;
 // import ttf2Woff2 from 'gulp-ttf2woff2';
 // const ttf2woff2 = ttf2Woff2;
 
+//Scripts
+import cnt from 'gulp-concat';
+const concat = cnt;
+import scm from 'gulp-sourcemaps';
+const sourcemaps = scm;
+
+
 // Browsersync
  export const  browsersync=()=> {
     browserSync.init({
@@ -138,7 +145,7 @@ export const css=()=> {
             )
         // .pipe(group-media())
         .pipe(dest(path.build.css))
-        .pipe(cl_css())
+
         .pipe(
             rename({
                 extname:'.min.css'
@@ -153,7 +160,6 @@ export const css=()=> {
 // JS
 export const script=()=> {
     return gulp.src(path.src.js)
-            
         .pipe(fileInclude())
         .pipe(dest(path.build.js))
         .pipe(

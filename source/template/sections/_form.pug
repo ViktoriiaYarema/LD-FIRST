@@ -11,8 +11,9 @@ section.form-section
                 button(type='button').form-close-button x
                 .form-text Sit down with our experts to receive a free customized marketing plan for your business + Learn How To Use Google and Facebook to get 5000% ROI or more
                 .form-fields
-                    input.form-input(type="text" placeholder="Your Name")
-                    input.form-input(type="text" placeholder="Contact Number")
-                    input.form-input(type="text" placeholder="Contact Name")
+                    input.form-input(type="text" placeholder="Your Name" required )
+                    input.form-input(type="tel" placeholder="Contact Number" required pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+    minlength="13" maxlength="13")
+                    input.form-input(type="email" placeholder="Contact Email" required )
                 button(type='submit').button.button--red Submit now
                 
